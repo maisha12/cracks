@@ -124,9 +124,13 @@ document.getElementById('calTotal').addEventListener('click', function () {
     const perPlayerValueTotal = parseFloat(totalExpensesString);
 
     const inputManagerFeild = document.getElementById('inputManager');
-    const perPlayerString = inputManagerFeild.value;
-    const inputManagerTotal = parseInt(perPlayerString);
+    const inputManagerString = inputManagerFeild.value;
+    const inputManagerTotal = parseFloat(inputManagerString);
 
+
+    const inputCoachFeild = document.getElementById('inputCoach');
+    const inputCoachString = inputCoachFeild.value;
+    const inputCoachTotal = parseFloat(inputCoachString);
 
 })
 
