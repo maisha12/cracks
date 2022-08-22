@@ -116,23 +116,25 @@ document.getElementById('expenses-calculate').addEventListener('click', function
     const playerCost = perPlayerValue * listItemCount;
     const playerExpenses = document.getElementById('pE');
     playerExpenses.innerText = playerCost;
-
 })
-document.getElementById('calTotal').addEventListener('click', function () {
-    const totalExpenses = pE.innerText;
-    const totalExpensesString = totalExpenses.value;
-    const perPlayerValueTotal = parseFloat(totalExpensesString);
 
+document.getElementById('calTotal').addEventListener('click', function () {
     const inputManagerFeild = document.getElementById('inputManager');
     const inputManagerString = inputManagerFeild.value;
     const inputManagerTotal = parseFloat(inputManagerString);
-
 
     const inputCoachFeild = document.getElementById('inputCoach');
     const inputCoachString = inputCoachFeild.value;
     const inputCoachTotal = parseFloat(inputCoachString);
 
-})
+    const playerExpensesFeild = document.getElementById('pE');
+    const playerExpensesString = playerExpensesFeild.innerText;
+    perPlayerValueTotal = parseFloat(playerExpensesString)
 
+    const total = inputManagerTotal + inputCoachTotal + perPlayerValueTotal;
+    const totalCost = document.getElementById('pC');
+    totalCost.innerText = total;
+
+})
 
 
