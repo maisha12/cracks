@@ -120,6 +120,12 @@ document.getElementById('expenses-calculate').addEventListener('click', function
 })
 document.getElementById('calTotal').addEventListener('click', function () {
     const totalExpenses = pE.innerText;
+    const totalExpensesString = totalExpenses.value;
+    const perPlayerValueTotal = parseFloat(totalExpensesString);
+
+    const inputManagerFeild = document.getElementById('inputManager');
+    const perPlayerString = inputManagerFeild.value;
+    const inputManagerTotal = parseInt(perPlayerString);
 
 
 })
